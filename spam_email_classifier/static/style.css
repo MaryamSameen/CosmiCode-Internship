@@ -1,0 +1,114 @@
+body {
+    background: linear-gradient(115deg, #68e0cf 0%, #b1b5ec 100%);
+    font-family: 'Poppins', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    color: #36413e;
+    position: relative;
+}
+
+/* blurred glass background */
+.background-blur {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: inherit;
+    filter: blur(20px) brightness(80%);
+    z-index: 0;
+}
+
+.main-container {
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+    margin: 80px auto;
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    box-shadow: 0 10px 32px 2px rgba(96,115,129,0.10);
+    padding: 38px 36px 18px 36px;
+    text-align: center;
+}
+
+/* Header and logo */
+.logo {
+    font-size: 50px;
+    filter: drop-shadow(0 2px 3px #b1b5ec);
+    margin-bottom: 5px;
+}
+header h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+header .spam { color: #c81652; font-weight: bold; }
+header .ham { color: #05a891; font-weight: bold; }
+
+/* Form styling */
+form textarea {
+    width: 97%;
+    min-height: 100px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #b1b5ec;
+    font-size: 1rem;
+    padding: 12px;
+    background: rgba(245,250,255,0.90);
+    resize: vertical;
+    transition: box-shadow .2s;
+}
+form textarea:focus {
+    box-shadow: 0 1px 12px 4px #97ffe9aa;
+    outline: none;
+    border-color: #05a891;
+}
+
+form button {
+    padding: 11px 38px;
+    background: linear-gradient(92deg,#00d2a2 10%,#c81652 90%);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 28px -8px #05a89155;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+form button:hover {
+    background: linear-gradient(92deg,#c81652 10%,#00d2a2 90%);
+}
+
+/* Result card */
+.result-card {
+    margin: 29px auto 3px auto;
+    padding: 20px 1px 12px 1px;
+    border-radius: 12px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 85%;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 18px -5px #b1b5ec93;
+    border: 2.5px solid #b1b5ec44;
+}
+.spam-bg { background: linear-gradient(90deg, #fad6e6 40%, #e97ca8 100%); color: #c81652; }
+.ham-bg { background: linear-gradient(90deg, #d0fdfa 10%, #9de396 100%); color: #068a62; }
+
+/* Footer */
+footer {
+    font-size: 0.95rem;
+    color: #36413e55;
+    margin-top: 35px;
+    letter-spacing: 0.7px;
+}
+footer a { color: #c81652; text-decoration: none; font-weight: 700; }
+footer a:hover { color: #05a891; }
+
+/* Responsive */
+@media (max-width: 600px) {
+    .main-container { padding: 15px 8px 8px 8px; }
+    form textarea { font-size: 0.95rem; }
+    .result-card { font-size: 1.3rem; }
+}

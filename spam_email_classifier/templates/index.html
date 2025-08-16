@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spam Email Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-blur"></div>
+    <div class="main-container">
+        <header>
+            <div class="logo">✉️</div>
+            <h1>Spam Email Classifier</h1>
+            <p>Enter your email text below and let AI reveal if it’s <span class="spam">Spam</span> or <span class="ham">Safe</span>.</p>
+        </header>
+        <form method="POST" autocomplete="off">
+            <textarea name="email_text" rows="9" cols="60" placeholder="Paste your email text here..." required></textarea>
+            <button type="submit">Analyze</button>
+        </form>
+        {% if prediction %}
+        <div class="result-card {% if prediction == 'Spam' %}spam-bg{% else %}ham-bg{% endif %}">
+            <h2>{{ prediction }}</h2>
+        </div>
+        {% endif %}
+        <footer>
+            <p>Powered by Scikit-learn & Flask · <a href="#" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+</body>
+</html>
