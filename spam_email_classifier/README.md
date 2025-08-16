@@ -33,7 +33,8 @@ The app provides a clean, modern web UI to test live email text.
 
 1. **Clone the repository**
     ```
-    git clone 
+    git clone https://github.com/MaryamSameen/CosmiCode-Internship/tree/master/spam_email_classifier
+    
     cd spam_email_classifier
     ```
 
@@ -52,6 +53,8 @@ The app provides a clean, modern web UI to test live email text.
 4. **Download dataset**
     - Download the SMS Spam Collection Dataset as `spam.csv` and place it in the project root.
 
+    - Uses SMS Spam Collection Dataset from [Kaggle](https://www.kaggle.com/datasets/uciml/sms-spam-collection-dataset)
+
 5. **Train the model**
     ```
     python model.py
@@ -67,6 +70,13 @@ The app provides a clean, modern web UI to test live email text.
     - Visit http://localhost:5000 to use the spam email classifier UI.
 
 ---
+## Output ScreenShots
+
+1- ![alt text](image.png)
+
+2-![alt text](image-1.png)
+
+3-![alt text](image-2.png)
 
 ## File Overview
 
